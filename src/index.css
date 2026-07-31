@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 25% 8%;
+    --foreground: 180 100% 90%;
+
+    --card: 220 25% 10%;
+    --card-foreground: 180 100% 90%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 180 100% 90%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 220 25% 8%;
+    --primary-glow: 180 100% 60%;
+
+    --secondary: 270 100% 60%;
+    --secondary-foreground: 220 25% 8%;
+    --secondary-glow: 270 100% 70%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 180 50% 60%;
+
+    --accent: 290 100% 55%;
+    --accent-foreground: 220 25% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 220 25% 8%;
+
+    --success: 142 76% 50%;
+    --success-foreground: 220 25% 8%;
+
+    --border: 180 30% 25%;
+    --input: 220 25% 15%;
+    --ring: 180 100% 50%;
+
+    --radius: 0.75rem;
+
+    --quantum-cyan: 180 100% 50%;
+    --quantum-purple: 270 100% 60%;
+    --quantum-pink: 320 100% 65%;
+    --quantum-grid: 180 50% 15%;
+    
+    --gradient-quantum: linear-gradient(135deg, hsl(180 100% 50% / 0.2), hsl(270 100% 60% / 0.2));
+    --gradient-hero: linear-gradient(135deg, hsl(180 100% 40%), hsl(270 100% 50%));
+    --shadow-quantum: 0 0 30px hsl(180 100% 50% / 0.3);
+    --shadow-quantum-strong: 0 0 50px hsl(180 100% 50% / 0.5);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  .quantum-glow {
+    box-shadow: 0 0 20px hsl(var(--quantum-cyan) / 0.4),
+                0 0 40px hsl(var(--quantum-purple) / 0.2);
+  }
+  
+  .quantum-text {
+    background: linear-gradient(135deg, hsl(var(--quantum-cyan)), hsl(var(--quantum-purple)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
